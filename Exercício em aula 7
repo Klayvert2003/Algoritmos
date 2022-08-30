@@ -1,0 +1,27 @@
+#include <iostream>
+#include <locale>
+
+using namespace std;
+
+int main()
+{
+setlocale (LC_ALL, ("Portuguese"));
+
+int v[5],i;
+
+cout << "Insira cinco valores no vetor: " << endl;
+
+for(i=0; i < 5; i++)
+{
+cin >> v[i];
+}
+
+cout << endl << "Valor digitado ao contrario e: " << endl;
+
+for(i = 4; i >=0; i--)
+{
+cout << v[i] << endl;
+} 
+
+return 0;
+}
