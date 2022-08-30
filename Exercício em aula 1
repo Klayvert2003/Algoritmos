@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	float valor;
+	
+	cout << "Digite a tabuada de qual numero quer fazer: " << endl;
+	cin >> valor;
+	
+	for(int i=1;i <= 10;i++)
+	{
+		cout << valor << " X " << i << " = " << valor * i << endl;
+	}	
+	
+	
+	return 0;
+}
