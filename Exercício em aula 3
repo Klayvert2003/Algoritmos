@@ -1,0 +1,28 @@
+#include <iostream>
+#include <locale>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Portuguese");
+	
+	int n1, n2;
+	
+	cout << "Digite o primeiro n�mero " << endl;
+	cin >> n1;
+	
+	cout << "Digite o segundo n�mero " << endl;
+	cin >> n2;
+
+	
+	for(int i=n1;i <= n2; i++)
+	{
+		if(i % 2 == 0)
+		{
+			cout << "os numeros pares do intervalo sao: " << i << endl;
+		}	
+	}	
+	
+	return 0;
+}
