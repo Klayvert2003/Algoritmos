@@ -1,0 +1,43 @@
+#include <iostream>
+#include <locale>
+
+using namespace std;
+
+int main() 
+{
+	setlocale(LC_ALL, "Portuguese");
+	
+	int tempo=0, soma=0, mt=99999, pt=0, volta, nv; 
+	float media=0;
+	
+	cout << "Quantas voltas tera: " << endl;
+	cin >> nv;
+	
+	for(int v = 1; v <= nv; v++)
+	{
+		cout << "Informe o tempo da volta " << v << endl;
+		cin >> tempo;
+		soma = soma + tempo;
+		
+		if(tempo < mt)
+		{
+			mt = tempo;
+			volta = v;
+		}
+		
+		if(tempo > pt)
+		{
+			pt = tempo;
+		}
+	}
+	
+	media = soma / nv;
+	
+	cout << "O melhor tempo �: " << mt << endl;
+	cout << "O melhor tempo ocorreu na volta: " << volta << endl;
+	cout << "O pior tempo �: " << pt << endl;
+	cout << "A soma �: " << soma << endl;
+	cout << "A m�dia �: " << media << endl;
+	
+	return 0;
+}
