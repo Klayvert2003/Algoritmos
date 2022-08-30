@@ -1,0 +1,38 @@
+#include <iostream>
+#include <algorithm>
+#include <iterator>
+#include <map>
+
+using std::cout; using std::endl;
+using std::string; using std::map;
+
+bool keyExistsInMap(map<string, string> &m, const string& key)
+{
+    if (m.find(key) != m.end()) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+int main() {
+    map<string, string> veggy_map = {{"a", "Asparagus",},
+                                     {"b", "Beetroot",},
+                                     {"b", "Bedsetroot",},
+                                     {"g", "Ginger",},
+                                     {"m", "Melon",},
+                                     {"p", "Pumpkin",},
+                                     {"s", "Spinach",
+									 };
+
+    keyExistsInMap(veggy_map, "a") ?
+        cout << "Key exists" << endl :
+        cout << "Key does not exist\n" << endl;
+
+    keyExistsInMap(veggy_map, "z") ?
+    cout << "Key exists" << endl :
+    cout << "Key does not exist\n" << endl;
+
+
+    return EXIT_SUCCESS;
+}
