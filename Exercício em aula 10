@@ -1,0 +1,42 @@
+#include <iostream>
+#include <locale>
+
+using namespace std;
+
+int main() 
+{
+	float n1, n2, n3;
+	
+	setlocale(LC_ALL, "Portuguese");
+
+	cout << "Digite o valor dos 3 lados do tri�ngulo" << endl;
+	cin >> n1;
+	cin >> n2;
+	cin >> n3;
+	
+	if((n1 > n2 + n3) || (n2 > n1 + n3) || (n3 > n1 + n2))
+	{
+	
+	if(n1 == n2)
+	{
+		if(n2 == n3)
+		{
+			cout << "O Triangulo e Equilatero! " << endl;
+		}
+	}
+	
+	if((n1 == n2) || (n2 == n3) || (n3 == n1))
+	{
+		cout << "O Triangulo Isoceles!" << endl;
+	}
+	else
+	{
+		cout << "O Triangulo e Escaleno" << endl;
+	}
+	else
+	{
+		cout << "Nao e um Triangulo! " << endl; 	
+	}
+	}
+	return 0;
+}
