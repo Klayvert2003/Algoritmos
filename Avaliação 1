@@ -1,0 +1,89 @@
+#include <iostream>
+#include <locale>
+
+using namespace std;
+
+bool Lista_Cheia(int aux, int i)
+{
+	if(i < aux)
+	{
+		return true;
+	}
+	
+	if(i == aux)
+	{
+		return false;
+	}
+}
+
+bool Consulta_Prato(int aux, int i)
+{
+	if(i < aux)
+	{
+		return true;
+	}
+	
+	if(i == aux)
+	{
+		return false;
+	}
+}
+
+int main()
+{ 
+	setlocale(LC_ALL,"Portuguese");
+	
+	int opcao, telefone, telefoneaux;
+	string convidado, convidadoaux, prato, pratoaux, convidadop[3][3];
+	
+do
+{
+	cout << "====Festa Junina====" << endl;
+	cout << "1- Incluir convidado(None, telefone e prato)" << endl;
+	cout << "2- Pesquiusar nome do convidado" << endl;
+	cout << "3- imprimir lista de convidados" << endl;
+	cout << "4- Sair" << endl;
+	cin >> opcao;
+	
+	switch(opcao)
+	{
+		case 1:
+		cout << "Digite o nome do convidado" << endl;
+		cin >> convidadop[3][3];
+		
+		cout << "Digite o telefone do convidado" << endl;
+		cin >> telefone;
+		
+		cout << "Digite o prato do convidado" << endl;
+		cin >> prato;
+		break;
+		
+		case 2:	
+		if(Lista_Cheia)
+		{
+			cout << "lista cheia" << endl;
+			break;
+		}
+		
+		if(Consulta_Prato)
+		{
+			cout << "lista de pratos cheia" << endl;
+			break;
+		}
+		break;
+			
+		case 3:
+			convidadoaux = convidadop[3][3];
+			telefoneaux = telefone;
+			pratoaux = prato;
+		cout << "Os convidados sao: " << convidadoaux << " telefone " << telefoneaux << " e seu prato e: " << pratoaux << endl;
+	break;
+		
+		case 4:
+		break;
+	}
+}while (opcao < 4);
+	
+	return 0; 
+	
+	}
