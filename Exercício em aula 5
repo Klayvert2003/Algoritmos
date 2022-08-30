@@ -1,0 +1,27 @@
+#include <iostream>
+#include <locale>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Portuguese");
+	
+	float notas[3], media;
+	int i;
+	
+	cout << "Digite tres notas" << endl;
+	
+	for(i=0; i <= 3; i++)
+	{
+		cin >> notas[i];
+	}
+	
+	media = notas[i] / 3;
+ 	
+ 	cout << "Sua media e: " << media << endl;
+
+ 	return 0;
+}
+
+//media = notas[0] + notas[1] + notas[2];
