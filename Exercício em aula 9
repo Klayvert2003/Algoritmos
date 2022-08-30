@@ -1,0 +1,26 @@
+#include <iostream>
+#include <locale>
+
+using namespace std;
+
+int main() 
+{
+	setlocale (LC_ALL, ("Portuguese"));
+	
+	int va[6], vb[6] = {10,30,70,50,20,80};
+	int vc[6];
+	
+	for(int i=0; i < 6; i++)
+	{
+		cin >> va[i];
+		vc[i] = va[i] + vb[i];
+	}
+	
+	for(int i=0; i < 6; i++)
+	{
+		cout << va[i] << "|" << endl;
+		cout << vc[i] << "|";
+	}
+
+	return 0;
+}
